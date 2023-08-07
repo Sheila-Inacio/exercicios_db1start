@@ -1,21 +1,30 @@
 print(" ----------------- Aposta da mega-sena! Boa sorte. ----------------- ")
 
 numeros_aposta = int(input("Informe quantos numeros quer apostar de 6 à 10: "))
-numeros_escolha = 0
-x = 1
+numero_escolha = 0
+numero_jaescolhido = False
+lista = []
 
 while numeros_aposta < 6 or numeros_aposta > 10:
     print("Numero inválido! ")
     numeros_aposta = int(input("Informe quantos numeros quer apostar de 6 à 10: "))
 
-
-
-
-if numeros_escolha > 1 or numeros_escolha < 61:
-    numeros_escolha = int(input(f"Informe {x} numero da aposta, deve ser entre 1 à 60: "))
-    x = x + 1
-
-    
+while len(lista) < numeros_aposta:
+    numero_escolha = int(input(f"Informe {len(lista) + 1} numero da aposta, deve ser entre 1 à 60: "))
+    if numero_escolha < 0:
+       print('Numero invalido!')
+       continue
+    if numero_escolha > 60:
+        print('Numero invalido!')
+        continue
+    for x in lista:
+        if x == numero_escolha :
+            numero_jaescolhido = True
+    if numero_jaescolhido:
+        print(f'Numero {numero_escolha} já escolhido!')
+        numero_jaescolhido = False
+        continue
+    lista.append(numero_escolha)
 if numeros_aposta == 6:
     print(" O valor da aposta é 5 Reais ")      
 elif numeros_aposta == 7:
@@ -27,10 +36,4 @@ elif numeros_aposta == 9:
 elif numeros_aposta == 10:
     print(" O valor da aposta é 945,00 Reais ") 
 
-#  print(" [] ")  
-
-# 6 == [({'5 Reais']
-# 7 == ['31.50 Reais']  
-# 8 == ['126,00 Reais']
-# 9 == ['378,00 Reais']
-# 10 == ['945,00 Reais']
+print(lista)
