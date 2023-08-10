@@ -1,3 +1,6 @@
+# Escreva um programa que retorne o maior e o menor
+# número de uma lista
+
 lista = [10, 20, 30, 0, 8, 50, 41]
 maior = 0
 menor = 0
