@@ -1,0 +1,2 @@
+# Crie uma classe chamada Ponto3D que herde de Object. Na classe Ponto3D, crie um construtor que receba 3 números e armazene-os 
+# em 3 variáveis. Crie uma forma para que ao exibir o conteúdo da instancia a informação apresentada seja: (<num1>;<num2>;<num3>)
