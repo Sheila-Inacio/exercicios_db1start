@@ -32,9 +32,9 @@ class JatoMilitar1Lugar:
         return f'(Jato:<{self.modelo}>\n Base inicial: <{self.base}> \n Piloto: <{self.nome_piloto}> \n Histórico de tranferências: < {self.destino}> )'
     
  
-aviao = JatoMilitar1Lugar('f250', 'Londres')
-aviao.designar_piloto('Daniel')
-aviao.rebasear_aeronave('EUA')
-aviao.rebasear_aeronave('Brasil')
-aviao.rebasear_aeronave('México')
-print(aviao)
+# aviao = JatoMilitar1Lugar('f250', 'Londres')
+# aviao.designar_piloto('Daniel')
+# aviao.rebasear_aeronave('EUA')
+# aviao.rebasear_aeronave('Brasil')
+# aviao.rebasear_aeronave('México')
+# print(aviao)

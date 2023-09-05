@@ -9,3 +9,22 @@
 # Base inicial: <nome da base de origem>
 # Piloto: <nome dos pilotos designados>
 # Histórico de transferências: <listagem das bases pelas quais a aeronave passou mostrando a data, hora e base>
+
+from classe9 import JatoMilitar1Lugar
+class JatoMilitar2Lugares(JatoMilitar1Lugar):
+
+    def designar_piloto(self, nome_piloto, nome_co_piloto):
+        self.nome_piloto = nome_piloto
+        self.nome_co_piloto = nome_co_piloto
+
+    def __str__(self):
+        return f'(Jato:<{self.modelo}>\n Base inicial: <{self.base}> \n Piloto: <{self.nome_piloto, self.nome_co_piloto}> \n Histórico de tranferências: < {self.destino}> )'
+    
+
+
+aviao = JatoMilitar2Lugares('f250', 'Londres')
+aviao.designar_piloto('Daniel', 'Sheila')
+aviao.rebasear_aeronave('EUA')
+aviao.rebasear_aeronave('Brasil')
+aviao.rebasear_aeronave('México')
+print(aviao)
